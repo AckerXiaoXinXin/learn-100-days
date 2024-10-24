@@ -1,5 +1,6 @@
 from sklearn.datasets import make_blobs
 from sklearn.cluster import KMeans
+from sklearn.cluster import MiniBatchKMeans
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
@@ -8,7 +9,7 @@ import sys
 sys.setrecursionlimit(5000)
 
 
-X, y = make_blobs(n_samples=300, centers=3, cluster_std=0.60, random_state=42)
+X, y = make_blobs(n_samples=300, centers=5, cluster_std=0.60, random_state=42)
 
 print(type(X))
 print(X.shape)
@@ -17,7 +18,7 @@ pca = PCA(n_components=2)
 
 X = pca.fit_transform(X)
 
-kmeans = KMeans(n_clusters=3, init='k-means++', max_iter=100, n_init=20, random_state=42)
+kmeans = MiniBatchKMeans(n_clusters=3, init='k-means++', max_iter=100, n_init=20, random_state=42)
 
 kmeans.fit(X)
 
