@@ -5,7 +5,7 @@ from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.utils import to_categorical
 
 
-(x_train, x_test), (y_train, y_test) = mnist.load_data()
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train, x_test = x_train/255.0, x_test/255.0
 
 x_train.astype('float32')
