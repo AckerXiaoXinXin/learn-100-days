@@ -6,14 +6,11 @@ from tensorflow.keras.utils import to_categorical
 
 
 (x_train, x_test), (y_train, y_test) = mnist.load_data()
-x_train, x_test = x_train/255, x_test/255
+x_train, x_test = x_train/255.0, x_test/255.0
 
 x_train.astype('float32')
 x_test.astype('float32')
 
-y_train, y_test = y_train/255, y_test/255
-y_train.astype('float32')
-y_test.astype('float32')
 y_train, y_test = to_categorical(y_train), to_categorical(y_test)
 
 model = Sequential([
