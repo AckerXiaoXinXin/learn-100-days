@@ -14,12 +14,12 @@ x_test = x_test/255
 x_train.astype('float32')
 x_test.astype('float32')
 
-model = Sequential(
+model = Sequential([
     Flatten(input_shape=(28, 28)),
     Dense(128, activation='relu'),
     Dense(64, activation='sigmoid'),
     Dense(10, activation='softmax'),
-)
+])
 
 model.compile(
     optimizer=Adam(),
