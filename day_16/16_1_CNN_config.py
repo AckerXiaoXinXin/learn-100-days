@@ -4,11 +4,11 @@ from tensorflow.keras import datasets, layers, models
 
 # 加载 MNIST 数据集
 (x_train, y_train), (x_test, y_test) = datasets.mnist.load_data()
-print(f'original x_train: {x_train[0]}, x_test: {x_test[0]}')
+
 # 数据预处理：将数据从 (28, 28) 格式转换为 (28, 28, 1)，并归一化到 [0, 1] 范围
 x_train = np.expand_dims(x_train, axis=-1).astype('float32') / 255
 x_test = np.expand_dims(x_test, axis=-1).astype('float32') / 255
-print(f'expanded x_train: {x_train[0]}, x_test: {x_test[0]}')
+
 # 输出类别数（0-9）
 num_classes = 10
 # 对标签进行 one-hot 编码
