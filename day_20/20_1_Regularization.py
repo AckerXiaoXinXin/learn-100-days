@@ -25,9 +25,10 @@ def build_model(l2_lambda=0.0, dropout_rate=0.0):
     model.add(Dense(10, activation='softmax'))
     return model
 
+
 # 超参数
-l2_lambda = 0.001  # L2 正则化强度
-dropout_rate = 0.5  # Dropout 比率
+l2_lambda = 0.003  # L2 正则化强度
+dropout_rate = 0.3  # Dropout 比率
 
 # 用于调整超参数的模型
 model = build_model(l2_lambda=l2_lambda, dropout_rate=dropout_rate)
