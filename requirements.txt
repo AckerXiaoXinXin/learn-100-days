@@ -1,8 +1,0 @@
-torch~=2.2.2
-matplotlib
-numpy~=2.1.2
-scipy
-scikit-learn~=1.5.2
-tensorflow~=2.12.0
-
-pandas~=2.2.3

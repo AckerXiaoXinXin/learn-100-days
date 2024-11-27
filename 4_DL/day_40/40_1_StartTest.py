@@ -11,3 +11,7 @@ if __name__ == '__main__':
     print(y)
     print(y.numel())
     print(x.shape(12))
+    print(y.shape)
+    print(x.item())
+    print(y.item())
+    print(x.type())
